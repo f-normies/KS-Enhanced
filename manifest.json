@@ -1,26 +1,37 @@
 {
-    "manifest_version": 3,
-    "name": "F___ KS Tests",
-    "version": "1",
-    "description": "Chrome add-on for freedom of choice on ks2.rsmu.ru tests.",
-    "permissions": ["activeTab", "scripting"],
-    "content_scripts": [
-      {
-        "matches": ["https://ks2.rsmu.ru/tests2/questions*"],
-        "js": ["content.js"]
-      }
-    ],
-    "action": {
-      "default_popup": "popup.html",
-      "default_icon": {
-        "16": "images/icon16.png",
-        "64": "images/icon64.png",
-        "128": "images/icon128.png"
-      }
-    },
-    "icons": {
+  "manifest_version": 3,
+  "name": "F___ KS Tests",
+  "version": "1.1",
+  "description": "Chrome add-on for freedom of choice on ks2.rsmu.ru tests.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
       "16": "images/icon16.png",
       "64": "images/icon64.png",
       "128": "images/icon128.png"
     }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://ks2.rsmu.ru/tests2/questions*",
+        "https://ks2.rsmu.ru/performance/rating/current_rating"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "images/icon16.png",
+    "64": "images/icon64.png",
+    "128": "images/icon128.png"
   }
+}
+  

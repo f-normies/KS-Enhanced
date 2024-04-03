@@ -1,11 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Properties</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Настройки расширения</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 10px;
+        }
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+    </style>
 </head>
 <body>
-    Я делаю это в 2:47 ночи и мне лень делать кнопку вкл/выкл, простите)<br>
-    Подписывайтесь на <a href="https://t.me/bananus_integralus" target="_blank">Банановый Интеграл</a>
+    <h2>Настройки</h2>
+    <div>
+        <label for="semesterStart">Дата начала семестра:</label>
+        <input type="date" id="semesterStart">
+    </div>
+    <div>
+        <label for="toggleExtension">Включить расширения:</label>
+        <input type="checkbox" id="toggleExtension" checked>
+    </div>
+    <button id="saveSettings">Сохранить</button>
+    <script src="popup.js"></script>
 </body>
 </html>

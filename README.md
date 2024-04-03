@@ -9,7 +9,8 @@
 
 ## Features
 
-- Works exclusively on pages in the `https://ks2.rsmu.ru/tests2/questions` domain without affecting other sites.
+- Restoring the ability to select text in tests.
+- Automatic calculation and output of the current week number.
 
 ## Installation
 
