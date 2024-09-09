@@ -1,16 +1,13 @@
 {
   "manifest_version": 3,
   "name": "KS Enhanced",
-  "version": "1.1.1",
+  "version": "2.0",
   "description": "Chrome add-on for enhanced experience on ks2.rsmu.ru.",
   "permissions": [
     "activeTab",
     "storage",
     "tabs"
   ],
-  "background": {
-    "service_worker": "background.js"
-  },
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
@@ -22,10 +19,18 @@
   "content_scripts": [
     {
       "matches": [
-        "https://ks2.rsmu.ru/tests2/questions*",
-        "https://ks2.rsmu.ru/performance/rating/current_rating"
+        "https://ks.rsmu.ru/*",
+        "https://ks2.rsmu.ru/*"
       ],
       "js": ["content.js"]
+    },
+    {
+      "matches": [
+        "https://ks.rsmu.ru/tests2/questions*",
+        "https://ks2.rsmu.ru/tests2/questions*"
+      ],
+      "js": ["intercept.js"],
+      "run_at": "document_start"
     }
   ],
   "icons": {

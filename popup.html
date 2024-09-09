@@ -6,26 +6,49 @@
     <title>Настройки расширения</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             padding: 10px;
+            min-width: 200px;
+            font-family: inherit;
         }
-        label {
+        .panel-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .panel {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            width: 98%;
+            box-sizing: border-box;
+        }
+        .panel h3 {
+            margin-top: 0;
+        }
+        .setting {
             display: block;
             margin: 10px 0;
+        }
+        #disciplineList div {
+            white-space: nowrap;
         }
     </style>
 </head>
 <body>
-    <h2>Настройки</h2>
-    <div>
-        <label for="semesterStart">Дата начала семестра:</label>
-        <input type="date" id="semesterStart">
+    <!-- Panel container with flexbox for 2 columns -->
+    <div class="panel-container">
+        <!-- Panel for Toggle Extension -->
+        <div class="panel">
+            <h3>Настройки расширения</h3>
+            <label class="setting" for="semesterStart">Дата начала семестра:</label>
+            <input class="setting" type="date" id="semesterStart">
+        </div>
     </div>
-    <div>
-        <label for="toggleExtension">Включить расширения:</label>
-        <input type="checkbox" id="toggleExtension" checked>
-    </div>
+
     <button id="saveSettings">Сохранить</button>
+
     <script src="popup.js"></script>
 </body>
 </html>

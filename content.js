@@ -1,4 +1,3 @@
-// Function to restore text selection
 function enableTextSelection() {
     document.querySelectorAll('*').forEach(function(node) {
         const style = window.getComputedStyle(node);
@@ -11,7 +10,6 @@ function enableTextSelection() {
     });
 }
 
-// Function to calculate the current week number from the semester start date
 function calculateCurrentWeek(semesterStartDate) {
     const currentDate = new Date();
     const startDate = new Date(semesterStartDate);
@@ -20,7 +18,6 @@ function calculateCurrentWeek(semesterStartDate) {
     return Math.ceil(dayDiff / 7);
 }
 
-// Function to insert the current week info into the "Current Rating" page
 function insertCurrentWeekInfo() {
     chrome.storage.sync.get(['semesterStartDate'], function(data) {
         if (data.semesterStartDate) {
@@ -39,9 +36,5 @@ function insertCurrentWeekInfo() {
     });
 }
 
-// Determine the appropriate actions based on the current URL
-if (location.href.includes('https://ks2.rsmu.ru/tests2/questions')) {
-    enableTextSelection();
-} else if (location.href.includes('https://ks2.rsmu.ru/performance/rating/current_rating')) {
-    insertCurrentWeekInfo();
-}
+enableTextSelection();
+insertCurrentWeekInfo();
