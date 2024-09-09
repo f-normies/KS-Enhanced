@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "KS Enhanced",
   "version": "2.0",
-  "description": "Chrome add-on for enhanced experience on ks2.rsmu.ru.",
+  "description": "Дополнение для Chrome для более приятного взаимодействия с ks.rsmu.ru.",
   "permissions": [
     "activeTab",
     "storage",

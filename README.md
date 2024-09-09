@@ -4,33 +4,26 @@
 <p align="center">
     <img src="images/icon1024.png" width=384 alt="Logo">
     <br>
-    <b><i>Chrome add-on for enhanced experience on ks2.rsmu.ru.</i></b>
+    <b><i>Дополнение для Chrome для более приятного взаимодействия с ks.rsmu.ru.</i></b>
 </p>
 
-## Features
+## Возможности
 
-- Restoring the ability to select text in tests.
-- Automatic calculation and output of the current week number.
+- Возвращает выделение текста в тестах.
+- Автоматически рассчитывает текущую учебную неделю на основе заданной даты начала семестра.
+- Динамически обрабатывает тесты с возможностью их загрузки в форматах JSON и TXT.
 
-## Installation
+## Установка
 
-1. Clone or [download](https://github.com/f-normies/KS-Enhanced/archive/refs/heads/main.zip) this repo.
-2. Open the [Extension Page](chrome://extensions/) in your Chrome browser or similar.
-3. Switch on developer mode in the top right corner.
-4. Drag and drop the downloaded extension folder into your browser window and confirm the installation.
+1. Склонируйте или [скачайте](https://github.com/f-normies/KS-Enhanced/archive/refs/heads/main.zip) данный репозиторий.
+2. Откройте [вкладку расширений](chrome://extensions/) в браузере.
+3. Включите **режим разработчика** (обычно в верхнем правом углу).
+4. Перенесите папку с расширением в окошко браузера и радуйтесь!
 
-## Usage
+## Вклад в проект
 
-After installation, the extension is automatically activated on the `https://ks2.rsmu.ru/` domain pages.
+Мы приветствуем любой вклад в развитие проекта. Если вы хотите предложить улучшение или сообщить об ошибке, пожалуйста, воспользуйтесь разделом [Issues](https://github.com/f-normies/KS-Enhanced/issues).
 
-## Security
+## Лицензия
 
-This extension does not collect or transmit any data from your web pages. All code runs locally on your device.
-
-## Contribution to the project
-
-We welcome any contribution to the project. If you would like to suggest an improvement or report a bug, please use the [Issues](https://github.com/f-normies/KS-Enhanced/issues) section on GitHub.
-
-## Licence
-
-The project is distributed under the MIT licence. See the [LICENSE](LICENSE) file for more information.
+Проект распространяется под лицензией MIT. Дополнительную информацию см. в файле [LICENSE](LICENSE).
