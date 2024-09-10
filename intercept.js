@@ -39,7 +39,7 @@ function pollQuestionsTag() {
     const stopPollingTimeout = setTimeout(() => {
         clearInterval(pollInterval);
         console.log('Questions tag not found yet. Stopped polling.');
-    }, 1000);
+    }, 10000);
 }
 
 function renderQuestionsToText(questions) {
