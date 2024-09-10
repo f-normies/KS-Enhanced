@@ -138,15 +138,20 @@ function createDownloadButton(buttonText, fileType) {
 }
 
 function appendDownloadButtons() {
-    const closeButtonDiv = document.querySelector('div[data-v-08b4d270] input[name="close_btn"]').parentElement;
-    if (closeButtonDiv) {
+    const containerDiv = document.querySelector('div.container.tests-list');
+    if (containerDiv) {
+        const buttonDiv = document.createElement('div');
+        buttonDiv.setAttribute('data-v-08b4d270', '');
+
         const txtButton = createDownloadButton('Скачать (TXT)', 'txt');
         const jsonButton = createDownloadButton('Скачать (JSON)', 'json');
-        
-        closeButtonDiv.insertAdjacentElement('afterend', txtButton);
-        txtButton.insertAdjacentElement('afterend', jsonButton);
+
+        buttonDiv.appendChild(txtButton);
+        buttonDiv.appendChild(jsonButton);
+
+        containerDiv.appendChild(buttonDiv);
     } else {
-        console.error('Close button not found');
+        console.error('Container div not found');
     }
 }
 
